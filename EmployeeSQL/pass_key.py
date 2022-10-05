@@ -1,2 +1,2 @@
 #Postgres password to access the database
-password = "{Your password here}"
+password = "YOUR_PASSWORD_HERE"

@@ -1,8 +1,14 @@
 # Unit 9 Homework: Employee Database
 
-DATA ENGINEERING:
+Instruction: 
+1. Create database in Postgres named "employee_db" for the database, port number 5432
 Create tables for Titles, Employees, Salaries, Departments, Department Manager and Department Employees 
 (import data csv into tables according to its order with table Titles as 1st and table Department Employees as the last one)
+
+2. Before running the jupyter file "employee_sqlalchemy.ipynb", please run the file "pass_key.py" first and put your password in. The password is the one to run the Postgres, not the pgAdmin
+
+3. For the Bonus part (question 3), due to unclear instruction in which method to use so I have tried to use 2 ways, import 'dirty' file from Postgres, clean with Pandas and then plotting it to the bar chart/
+The 2nd method was using the 'clean' data from Postgres (creating a new table in SQL and clean it), then import to Jupyter and plotting it to the bar chart.
 
 # Background
 It’s a beautiful spring day, and it’s been two weeks since you were hired as a new data engineer at Pewlett Hackard. Your first major task is a research project on employees of the corporation from the 1980s and 1990s. All that remains of the database of employees from that period are six CSV files.
@@ -21,12 +27,15 @@ Add your files to this folder.
 Push these changes to GitHub.
 
 Instructions
+
 This assignment is divided into three parts: data modelling, data engineering, and data analysis.
 
 Data Modelling
+
 Inspect the CSVs and sketch out an ERD of the tables. Feel free to use a tool like http://www.quickdatabasediagrams.com.
 
 Data Engineering
+
 Use the provided information to create a table schema for each of the six CSV files. Remember to specify data types, primary keys, foreign keys, and other constraints.
 
 For the primary keys, verify that the column is unique. Otherwise, create a composite key, which takes two primary keys to uniquely identify a row.
@@ -40,23 +49,24 @@ Hint: To avoid errors, be sure to import the data in the same order that the tab
 Data Analysis
 Once you have a complete database, perform these steps:
 
-List the following details of each employee: employee number, last name, first name, sex, and salary.
+1. List the following details of each employee: employee number, last name, first name, sex, and salary.
 
-List first name, last name, and hire date for employees who were hired in 1986.
+2. List first name, last name, and hire date for employees who were hired in 1986.
 
-List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
+3. List the manager of each department with the following information: department number, department name, the manager's employee number, last name, first name.
 
-List the department of each employee with the following information: employee number, last name, first name, and department name.
+4. List the department of each employee with the following information: employee number, last name, first name, and department name.
 
-List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
+5. List first name, last name, and sex for employees whose first name is "Hercules" and last names begin with "B."
 
-List all employees in the Sales department, including their employee number, last name, first name, and department name.
+6. List all employees in the Sales department, including their employee number, last name, first name, and department name.
 
-List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
+7. List all employees in the Sales and Development departments, including their employee number, last name, first name, and department name.
 
-List the frequency count of employee last names (i.e., how many employees share each last name) in descending order.
+8. List the frequency count of employee last names (i.e., how many employees share each last name) in descending order.
 
-Bonus (Optional)
+#Bonus (Optional)
+
 As you examine the data, you begin to suspect that the dataset is fake. Maybe your boss gave you spurious data in order to test the data engineering skills of a new employee? To confirm your hunch, you decide to create a visualisation of the data to present to your boss. Follow these steps:
 
 Import the SQL database into Pandas. (Yes, you could read the CSVs directly in Pandas, but you are, after all, trying to prove your technical mettle.) This step may require some research. Feel free to use the following code to get started. Be sure to make any necessary modifications for your username, password, host, port, and database name:
@@ -68,6 +78,6 @@ Consult the SQLAlchemy documentation for more information.
 
 If you’re using a password, do not upload your password to your GitHub repository. Review this video and the GitHub website for more information.
 
-Create a histogram to visualise the most common salary ranges for employees.
+1. Create a histogram to visualise the most common salary ranges for employees.
 
-Create a bar chart of average salary by title.
+2. Create a bar chart of average salary by title.
