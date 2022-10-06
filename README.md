@@ -2,39 +2,28 @@
 
 Instruction: 
 1. Create database in Postgres named "employee_db" for the database, port number 5432
-Create tables for Titles, Employees, Salaries, Departments, Department Manager and Department Employees 
-(import data csv into tables according to its order with table Titles as 1st and table Department Employees as the last one)
+Create tables for Departments, Titles, Employees, Salaries, Department Manager and Department Employees 
+(import data csv into tables according to its order with table Departments as 1st, Titles as 2nd,... and table Department Employees as the last one)
 
 2. Before running the jupyter file "employee_sqlalchemy.ipynb", please run the file "pass_key.py" first and put your password in. The password is the one to run the Postgres, not the pgAdmin
 
 3. For the Bonus part (question 3), due to unclear instruction in which method to use so I have tried to use 2 ways, import 'dirty' file from Postgres, clean with Pandas and then plotting it to the bar chart/
 The 2nd method was using the 'clean' data from Postgres (creating a new table in SQL and clean it), then import to Jupyter and plotting it to the bar chart.
 
-# Background
+## Background
 It’s a beautiful spring day, and it’s been two weeks since you were hired as a new data engineer at Pewlett Hackard. Your first major task is a research project on employees of the corporation from the 1980s and 1990s. All that remains of the database of employees from that period are six CSV files.
 
 In this assignment, you will design the tables to hold data in the CSVs, import the CSVs into a SQL database, and answer questions about the data. In other words, you will perform data modelling, data engineering, and data analysis.
-
-Before You Begin
-Create a new repository for this project called sql-challenge. Do not add this homework assignment to an existing repository.
-
-Clone the new repository to your computer.
-
-Inside your local Git repository, create a directory for the SQL challenge. Use a folder name that corresponds to this assignment, like EmployeeSQL.
-
-Add your files to this folder.
-
-Push these changes to GitHub.
 
 Instructions
 
 This assignment is divided into three parts: data modelling, data engineering, and data analysis.
 
-Data Modelling
+## Data Modelling
 
 Inspect the CSVs and sketch out an ERD of the tables. Feel free to use a tool like http://www.quickdatabasediagrams.com.
 
-Data Engineering
+## Data Engineering
 
 Use the provided information to create a table schema for each of the six CSV files. Remember to specify data types, primary keys, foreign keys, and other constraints.
 
@@ -46,7 +35,7 @@ Import each CSV file into the corresponding SQL table.
 
 Hint: To avoid errors, be sure to import the data in the same order that the tables were created. Also remember to account for the headers when importing.
 
-Data Analysis
+## Data Analysis
 Once you have a complete database, perform these steps:
 
 1. List the following details of each employee: employee number, last name, first name, sex, and salary.
@@ -65,7 +54,7 @@ Once you have a complete database, perform these steps:
 
 8. List the frequency count of employee last names (i.e., how many employees share each last name) in descending order.
 
-#Bonus (Optional)
+## Bonus (Optional)
 
 As you examine the data, you begin to suspect that the dataset is fake. Maybe your boss gave you spurious data in order to test the data engineering skills of a new employee? To confirm your hunch, you decide to create a visualisation of the data to present to your boss. Follow these steps:
 
